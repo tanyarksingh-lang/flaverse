@@ -326,27 +326,27 @@ footer{background:var(--charcoal2);border-top:1px solid rgba(200,155,75,0.12);pa
     <div class="section-label">Our Cuisines</div>
     <h2 class="section-title">Five Worlds of Flavour</h2>
     <div class="cats-grid">
-      <div class="cat-card reveal">
+      <div class="cat-card reveal" onclick="navigateToMenuSection('North Indian')">
         <span class="cat-icon">🍛</span>
         <div class="cat-name">North Indian</div>
         <div class="cat-desc">Rich gravies & tandoor</div>
       </div>
-      <div class="cat-card reveal reveal-delay-1">
+      <div class="cat-card reveal reveal-delay-1" onclick="navigateToMenuSection('Mughlai')">
         <span class="cat-icon">🫕</span>
         <div class="cat-name">Mughlai</div>
         <div class="cat-desc">Royal aromatic classics</div>
       </div>
-      <div class="cat-card reveal reveal-delay-2">
+      <div class="cat-card reveal reveal-delay-2" onclick="navigateToMenuSection('Chinese')">
         <span class="cat-icon">🍜</span>
         <div class="cat-name">Chinese</div>
         <div class="cat-desc">Indo-Chinese favourites</div>
       </div>
-      <div class="cat-card reveal reveal-delay-3">
+      <div class="cat-card reveal reveal-delay-3" onclick="navigateToMenuSection('Seafood')">
         <span class="cat-icon">🦐</span>
         <div class="cat-name">Seafood</div>
         <div class="cat-desc">Coastal Goan & Malwani</div>
       </div>
-      <div class="cat-card reveal">
+      <div class="cat-card reveal" onclick="navigateToMenuSection('Biryani')">
         <span class="cat-icon">🍚</span>
         <div class="cat-name">Biryani</div>
         <div class="cat-desc">Dum-cooked perfection</div>
@@ -512,25 +512,7 @@ footer{background:var(--charcoal2);border-top:1px solid rgba(200,155,75,0.12);pa
   </div>
 </section>
 
-<!-- INSTAGRAM -->
-<section id="instagram" style="background:var(--charcoal2)">
-  <div class="container">
-    <div class="section-label">@flaverse_pune</div>
-    <h2 class="section-title">See What's Cooking</h2>
-    <p class="section-sub">Follow us on Instagram for daily specials, behind-the-scenes kitchen moments, and more.</p>
-    <div class="ig-grid reveal">
-      <div class="ig-tile" style="background:linear-gradient(135deg,#2D1810,#1A0E08)"><span>🍚</span><div class="ig-overlay"><span>View Post</span></div></div>
-      <div class="ig-tile" style="background:linear-gradient(135deg,#1A1A10,#100E08)"><span>🫕</span><div class="ig-overlay"><span>View Post</span></div></div>
-      <div class="ig-tile" style="background:linear-gradient(135deg,#10181A,#080F12)"><span>🐟</span><div class="ig-overlay"><span>View Post</span></div></div>
-      <div class="ig-tile" style="background:linear-gradient(135deg,#1A1020,#100815)"><span>🍗</span><div class="ig-overlay"><span>View Post</span></div></div>
-      <div class="ig-tile" style="background:linear-gradient(135deg,#181A10,#0F1008)"><span>🌿</span><div class="ig-overlay"><span>View Post</span></div></div>
-      <div class="ig-tile" style="background:linear-gradient(135deg,#20100A,#150800)"><span>🍜</span><div class="ig-overlay"><span>View Post</span></div></div>
-    </div>
-    <div style="text-align:center;margin-top:2rem">
-      <a class="btn-outline" href="https://www.instagram.com/flaverse_pune" target="_blank" rel="noopener">Follow on Instagram ↗</a>
-    </div>
-  </div>
-</section>
+<!-- Instagram section removed per request -->
 
 <!-- TESTIMONIALS -->
 <section id="testimonials">
@@ -972,6 +954,42 @@ function showPage(page){
   window.scrollTo({top:0,behavior:'smooth'});
   // Lazy render
   if(page==='menu') renderAll();
+}
+
+// Navigate from a cuisine card to the most relevant menu section.
+function navigateToMenuSection(label){
+  // Open menu page first
+  showPage('menu');
+  // Wait briefly for menu to render/populate
+  setTimeout(()=>{
+    // Find a menu section title that matches the label (first match wins)
+    const titles = Array.from(document.querySelectorAll('.menu-section-title'));
+    const found = titles.find(t => t.innerText.toLowerCase().includes(label.toLowerCase()));
+    if(found){
+      // scroll the section into view
+      found.scrollIntoView({behavior:'smooth',block:'start'});
+      // If the section id indicates veg/non-veg, switch subtab accordingly
+      const sec = found.closest('.menu-section');
+      if(sec && sec.id){
+        if(sec.id.startsWith('v-')) switchSubTab(document.querySelector('.sub-tab'), 'veg');
+        if(sec.id.startsWith('nv-')) switchSubTab(document.querySelectorAll('.sub-tab')[1], 'nonveg');
+      }
+      return;
+    }
+    // Fallback: try matching known keywords in the full menu (biryani, chinese, seafood)
+    const keywords = {
+      'biryani':'nv-biryani',
+      'chinese':'v-chinese',
+      'seafood':'nv-seafood'
+    };
+    const k = Object.keys(keywords).find(x => label.toLowerCase().includes(x));
+    if(k){
+      scrollToSec(keywords[k]);
+      return;
+    }
+    // Last resort: scroll to top of menu
+    scrollToSec('tab-food');
+  }, 250);
 }
 
 function toggleMenu(){
