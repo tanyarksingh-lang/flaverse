@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flaverse – Bold Flavours. Delivered Fresh. | Kothrud, Pune</title>
+<meta name="description" content="Authentic North Indian, Mughlai, Biryani, Seafood & Chinese cuisine delivered fresh from Kothrud, Pune. Order now for home delivery or takeaway.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#C89B4B;--gold-light:#E2B96F;--gold-dark:#A07A30;
+  --charcoal:#0F1115;--charcoal2:#181C24;--charcoal3:#22272F;
+  --ivory:#F7F3EE;--ivory2:#EDE8E1;--ivory3:#D8D2C8;
+  --grey:#8E9198;--grey2:#5A5F68;
+  --serif:'Playfair Display',serif;--sans:'Inter',sans-serif;
+  --radius:12px;--radius-sm:8px;
+  --transition:0.3s cubic-bezier(0.4,0,0.2,1);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--charcoal);color:var(--ivory);font-family:var(--sans);overflow-x:hidden;line-height:1.6}
+
+/* ── TYPOGRAPHY ── */
+h1,h2,h3,h4{font-family:var(--serif);line-height:1.2}
+h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:700}
+h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:600}
+h3{font-size:clamp(1.1rem,2.5vw,1.4rem);font-weight:600}
+p{font-family:var(--sans);font-weight:300;color:var(--grey)}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;background:rgba(15,17,21,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(200,155,75,0.12);transition:background var(--transition)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1200px;margin:0 auto}
+.logo{font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--ivory);text-decoration:none;letter-spacing:0.02em}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--grey);text-decoration:none;font-size:0.875rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;transition:color var(--transition);position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform var(--transition)}
+.nav-links a:hover{color:var(--ivory)}.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{background:var(--gold);color:var(--charcoal);padding:0.5rem 1.25rem;border-radius:var(--radius-sm);font-weight:600;font-size:0.8rem;text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:background var(--transition),transform var(--transition)}
+.nav-cta:hover{background:var(--gold-light);transform:translateY(-1px)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--ivory);transition:var(--transition)}
+@media(max-width:768px){
+  .nav-links{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(15,17,21,0.98);flex-direction:column;padding:2rem;gap:1.5rem;border-bottom:1px solid rgba(200,155,75,0.2)}
+  .nav-links.open{display:flex}
+  .hamburger{display:flex}
+  .nav-cta{display:none}
+}
+
+/* ── SECTIONS ── */
+section{padding:100px 5%}
+.container{max-width:1200px;margin:0 auto}
+
+/* ── HERO ── */
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;padding-top:120px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(200,155,75,0.08) 0%,transparent 70%),linear-gradient(135deg,#0F1115 0%,#181C24 100%);z-index:0}
+.hero-particles{position:absolute;inset:0;z-index:0;pointer-events:none}
+.particle{position:absolute;border-radius:50%;animation:float 8s ease-in-out infinite;opacity:0.15}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0deg);opacity:0.15}50%{transform:translateY(-30px) rotate(180deg);opacity:0.3}}
+.hero-content{position:relative;z-index:1;max-width:700px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-size:0.8rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.5rem}
+.hero-eyebrow::before{content:'';display:block;width:30px;height:1px;background:var(--gold)}
+.hero-title{color:var(--ivory);margin-bottom:1.5rem}
+.hero-title em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:1.05rem;color:var(--grey);max-width:550px;margin-bottom:2.5rem;font-weight:300;line-height:1.8}
+.btn-group{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:var(--charcoal);padding:0.85rem 2rem;border-radius:var(--radius-sm);font-weight:600;font-size:0.9rem;text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:all var(--transition);border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 30px rgba(200,155,75,0.3)}
+.btn-outline{background:transparent;color:var(--ivory);padding:0.85rem 2rem;border-radius:var(--radius-sm);font-weight:500;font-size:0.9rem;text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:all var(--transition);border:1px solid rgba(247,243,238,0.25);display:inline-flex;align-items:center;gap:8px}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.hero-visual{position:absolute;right:0;top:50%;transform:translateY(-50%);width:45%;max-width:600px;pointer-events:none;z-index:1;opacity:0.9}
+.hero-visual svg{width:100%;height:auto}
+.hero-trust{display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:3rem}
+.trust-badge{display:flex;align-items:center;gap:6px;background:rgba(200,155,75,0.08);border:1px solid rgba(200,155,75,0.18);border-radius:20px;padding:0.4rem 0.9rem;font-size:0.78rem;color:var(--ivory3);font-weight:500}
+.trust-badge::before{content:'✦';color:var(--gold);font-size:0.6rem}
+
+@media(max-width:900px){
+  .hero-visual{display:none}
+  #hero{text-align:center}
+  .hero-content{margin:0 auto}
+  .btn-group{justify-content:center}
+  .hero-trust{justify-content:center}
+  .hero-eyebrow{justify-content:center}
+}
+
+/* ── SECTION LABELS ── */
+.section-label{display:flex;align-items:center;gap:10px;color:var(--gold);font-size:0.75rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1rem}
+.section-label::after{content:'';flex:1;height:1px;background:rgba(200,155,75,0.25)}
+.section-title{color:var(--ivory);margin-bottom:0.75rem}
+.section-sub{color:var(--grey);font-size:1rem;max-width:500px;margin-bottom:3rem;line-height:1.8}
+
+/* ── CATEGORIES ── */
+#categories{background:var(--charcoal)}
+.cats-grid{display:flex;gap:1rem;overflow-x:auto;padding-bottom:1rem;scrollbar-width:none}
+.cats-grid::-webkit-scrollbar{display:none}
+.cat-card{flex:0 0 160px;background:var(--charcoal3);border:1px solid rgba(200,155,75,0.12);border-radius:var(--radius);padding:1.75rem 1rem;text-align:center;cursor:pointer;transition:all var(--transition);position:relative;overflow:hidden}
+.cat-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,155,75,0.05),transparent);opacity:0;transition:opacity var(--transition)}
+.cat-card:hover{border-color:rgba(200,155,75,0.4);transform:translateY(-4px)}.cat-card:hover::before{opacity:1}
+.cat-icon{font-size:2.2rem;margin-bottom:0.75rem;display:block}
+.cat-name{font-family:var(--serif);font-size:1rem;color:var(--ivory);font-weight:600}
+.cat-desc{font-size:0.75rem;color:var(--grey);margin-top:4px}
+
+/* ── WHY US ── */
+#why{background:var(--charcoal2)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:3rem}
+.why-card{background:var(--charcoal3);border:1px solid rgba(200,155,75,0.1);border-radius:var(--radius);padding:2rem;position:relative;overflow:hidden;transition:all var(--transition)}
+.why-card:hover{border-color:rgba(200,155,75,0.35);transform:translateY(-3px)}
+.why-card-icon{width:44px;height:44px;background:rgba(200,155,75,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.25rem}
+.why-card h3{font-size:1.05rem;color:var(--ivory);margin-bottom:0.5rem;font-family:var(--serif)}
+.why-card p{font-size:0.875rem;color:var(--grey);line-height:1.7}
+.why-card .accent-line{position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent);transform:scaleX(0);transform-origin:left;transition:transform 0.5s ease}
+.why-card:hover .accent-line{transform:scaleX(1)}
+
+/* ── MENU SHOWCASE ── */
+#popular{background:var(--charcoal)}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem;margin-top:1rem}
+.menu-card{background:var(--charcoal3);border:1px solid rgba(200,155,75,0.1);border-radius:var(--radius);overflow:hidden;transition:all var(--transition);cursor:pointer}
+.menu-card:hover{transform:translateY(-5px);border-color:rgba(200,155,75,0.3);box-shadow:0 20px 40px rgba(0,0,0,0.4)}
+.menu-card-img{height:200px;display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;overflow:hidden}
+.menu-card-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(15,17,21,0.7),transparent 50%)}
+.menu-card-body{padding:1.25rem}
+.menu-card-tag{font-size:0.7rem;color:var(--gold);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.4rem}
+.menu-card-name{font-family:var(--serif);font-size:1.1rem;color:var(--ivory);margin-bottom:0.35rem}
+.menu-card-desc{font-size:0.82rem;color:var(--grey);line-height:1.6}
+.menu-card-footer{display:flex;align-items:center;justify-content:space-between;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(200,155,75,0.1)}
+.menu-card-price{font-family:var(--serif);font-size:1rem;color:var(--gold);font-weight:600}
+.menu-card-btn{background:rgba(200,155,75,0.12);color:var(--gold);border:1px solid rgba(200,155,75,0.25);border-radius:var(--radius-sm);padding:0.4rem 0.9rem;font-size:0.78rem;font-weight:600;cursor:pointer;transition:all var(--transition)}
+.menu-card-btn:hover{background:var(--gold);color:var(--charcoal)}
+
+/* ── INSTAGRAM ── */
+#instagram{background:var(--charcoal2)}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin:2rem 0}
+.ig-tile{aspect-ratio:1;background:var(--charcoal3);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:2.5rem;position:relative;overflow:hidden;cursor:pointer;border:1px solid rgba(200,155,75,0.1);transition:all var(--transition)}
+.ig-tile::after{content:'';position:absolute;inset:0;background:rgba(200,155,75,0.15);opacity:0;transition:opacity var(--transition)}
+.ig-tile:hover{transform:scale(1.02)}.ig-tile:hover::after{opacity:1}
+.ig-overlay{position:absolute;inset:0;background:rgba(15,17,21,0.7);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity var(--transition)}
+.ig-tile:hover .ig-overlay{opacity:1}
+.ig-overlay span{color:var(--ivory);font-size:0.75rem;font-weight:600}
+
+/* ── TESTIMONIALS ── */
+#testimonials{background:var(--charcoal)}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem}
+.testi-card{background:var(--charcoal3);border:1px solid rgba(200,155,75,0.1);border-radius:var(--radius);padding:2rem;position:relative}
+.testi-card::before{content:'\201C';font-family:var(--serif);font-size:5rem;color:var(--gold);opacity:0.2;position:absolute;top:0.5rem;left:1.5rem;line-height:1}
+.stars{color:var(--gold);font-size:0.85rem;margin-bottom:1rem}
+.testi-text{font-size:0.9rem;color:var(--ivory3);line-height:1.8;margin-bottom:1.5rem;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:10px}
+.testi-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-dark));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;color:var(--charcoal)}
+.testi-name{font-size:0.875rem;font-weight:600;color:var(--ivory)}
+.testi-loc{font-size:0.75rem;color:var(--grey)}
+
+/* ── CTA BANNER ── */
+#cta-banner{background:linear-gradient(135deg,var(--charcoal2) 0%,var(--charcoal3) 100%);border-top:1px solid rgba(200,155,75,0.15);border-bottom:1px solid rgba(200,155,75,0.15);text-align:center}
+#cta-banner h2{color:var(--ivory);margin-bottom:0.75rem}
+#cta-banner p{color:var(--grey);margin-bottom:2rem}
+#cta-banner .btn-group{justify-content:center}
+
+/* ── MENU PAGE ── */
+#menu-page{display:none;background:var(--charcoal)}
+.menu-top-tabs{display:flex;gap:0.5rem;margin-bottom:2rem;border-bottom:1px solid rgba(200,155,75,0.15);padding-bottom:0}
+.top-tab{background:none;border:none;color:var(--grey);font-size:1rem;font-weight:600;font-family:var(--serif);padding:0.75rem 1.5rem;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all var(--transition)}
+.top-tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.sub-tabs{display:flex;gap:0.5rem;margin-bottom:2rem;flex-wrap:wrap}
+.sub-tab{background:var(--charcoal3);border:1px solid rgba(200,155,75,0.15);color:var(--grey);font-size:0.8rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;padding:0.5rem 1.25rem;border-radius:20px;cursor:pointer;transition:all var(--transition)}
+.sub-tab.active{background:var(--gold);color:var(--charcoal);border-color:var(--gold)}
+.cat-tabs{display:flex;gap:0.5rem;overflow-x:auto;margin-bottom:2rem;padding-bottom:0.5rem;scrollbar-width:none}
+.cat-tabs::-webkit-scrollbar{display:none}
+.cat-tab{background:none;border:1px solid rgba(200,155,75,0.12);color:var(--grey);font-size:0.78rem;font-weight:500;padding:0.45rem 1rem;border-radius:20px;cursor:pointer;white-space:nowrap;transition:all var(--transition);flex-shrink:0}
+.cat-tab.active,.cat-tab:hover{background:rgba(200,155,75,0.12);color:var(--gold);border-color:rgba(200,155,75,0.3)}
+.menu-search{width:100%;max-width:400px;background:var(--charcoal3);border:1px solid rgba(200,155,75,0.2);border-radius:var(--radius-sm);padding:0.75rem 1.25rem;color:var(--ivory);font-size:0.9rem;font-family:var(--sans);margin-bottom:1.5rem;outline:none;transition:border-color var(--transition)}
+.menu-search:focus{border-color:rgba(200,155,75,0.5)}
+.menu-search::placeholder{color:var(--grey2)}
+.menu-section{margin-bottom:3rem}
+.menu-section-title{font-family:var(--serif);font-size:1.3rem;color:var(--ivory);margin-bottom:1.25rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(200,155,75,0.15);display:flex;align-items:center;gap:10px}
+.menu-section-title span{font-size:0.7rem;background:rgba(200,155,75,0.12);color:var(--gold);padding:2px 8px;border-radius:10px;font-family:var(--sans);font-weight:600;letter-spacing:0.05em;text-transform:uppercase;vertical-align:middle}
+.menu-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.menu-item{background:var(--charcoal3);border:1px solid rgba(200,155,75,0.08);border-radius:var(--radius-sm);padding:1rem 1.25rem;display:flex;align-items:center;gap:10px;transition:all var(--transition);cursor:pointer}
+.menu-item:hover{border-color:rgba(200,155,75,0.25);background:var(--charcoal2)}
+.menu-item-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;border:1.5px solid}
+.menu-item-dot.veg{border-color:#4CAF50;background:transparent}.menu-item-dot.veg::after{content:'';display:block;width:4px;height:4px;background:#4CAF50;border-radius:50%;margin:2px auto}
+.menu-item-dot.nonveg{border-color:#E53935;background:transparent}.menu-item-dot.nonveg::after{content:'';display:block;width:4px;height:4px;background:#E53935;border-radius:50%;margin:2px auto}
+.menu-item-name{font-size:0.875rem;color:var(--ivory3);font-weight:500;line-height:1.3}
+
+/* ── ABOUT PAGE ── */
+#about-page{display:none;background:var(--charcoal)}
+.about-hero{background:linear-gradient(135deg,var(--charcoal2),var(--charcoal3));border-radius:var(--radius);padding:4rem;margin-bottom:4rem;position:relative;overflow:hidden}
+.about-hero::before{content:'';position:absolute;top:-50%;right:-20%;width:400px;height:400px;background:radial-gradient(circle,rgba(200,155,75,0.06),transparent 70%);border-radius:50%}
+.values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;margin-top:2rem}
+.value-card{background:var(--charcoal3);border:1px solid rgba(200,155,75,0.1);border-radius:var(--radius-sm);padding:1.5rem;text-align:center;transition:all var(--transition)}
+.value-card:hover{transform:translateY(-3px);border-color:rgba(200,155,75,0.3)}
+.value-card .icon{font-size:2rem;margin-bottom:0.75rem}
+.value-card h3{font-size:1rem;color:var(--ivory);font-family:var(--serif);margin-bottom:0.4rem}
+.value-card p{font-size:0.8rem;color:var(--grey);line-height:1.6}
+.exp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem}
+.exp-item{background:var(--charcoal3);border:1px solid rgba(200,155,75,0.1);border-radius:var(--radius-sm);padding:1.5rem;display:flex;align-items:center;gap:12px}
+.exp-item .icon{font-size:1.5rem}
+.exp-item p{font-size:0.875rem;color:var(--ivory3);font-weight:500}
+
+/* ── VISIT PAGE ── */
+#visit-page{display:none;background:var(--charcoal)}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem}
+@media(max-width:768px){.visit-grid{grid-template-columns:1fr}}
+.map-embed{border-radius:var(--radius);overflow:hidden;border:1px solid rgba(200,155,75,0.2)}
+.map-embed iframe{display:block;width:100%;height:400px;border:none}
+.contact-card{background:var(--charcoal3);border:1px solid rgba(200,155,75,0.15);border-radius:var(--radius);padding:2rem;display:flex;flex-direction:column;gap:1.5rem}
+.contact-detail{display:flex;gap:12px;align-items:flex-start}
+.contact-detail-icon{width:40px;height:40px;background:rgba(200,155,75,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.contact-detail-text label{font-size:0.7rem;color:var(--gold);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:2px}
+.contact-detail-text p{font-size:0.9rem;color:var(--ivory3);line-height:1.6}
+.hours-table{width:100%;border-collapse:collapse}
+.hours-table td{padding:0.4rem 0;font-size:0.875rem;color:var(--ivory3)}
+.hours-table td:first-child{color:var(--grey)}
+.hours-badge{display:inline-block;background:rgba(72,187,120,0.12);color:#68D391;border:1px solid rgba(72,187,120,0.25);border-radius:12px;padding:2px 10px;font-size:0.7rem;font-weight:600}
+.service-pills{display:flex;gap:0.5rem;flex-wrap:wrap}
+.service-pill{background:rgba(200,155,75,0.1);color:var(--gold);border:1px solid rgba(200,155,75,0.2);border-radius:20px;padding:0.35rem 0.9rem;font-size:0.78rem;font-weight:500}
+.visit-btn-group{display:flex;flex-direction:column;gap:0.75rem}
+.visit-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:0.8rem;border-radius:var(--radius-sm);font-weight:600;font-size:0.875rem;text-decoration:none;transition:all var(--transition);border:none;cursor:pointer}
+.visit-btn.primary{background:var(--gold);color:var(--charcoal)}
+.visit-btn.primary:hover{background:var(--gold-light)}
+.visit-btn.secondary{background:var(--charcoal2);color:var(--ivory);border:1px solid rgba(200,155,75,0.2)}
+.visit-btn.secondary:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ── FOOTER ── */
+footer{background:var(--charcoal2);border-top:1px solid rgba(200,155,75,0.12);padding:4rem 5% 2rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;max-width:1200px;margin:0 auto;margin-bottom:3rem}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
+.footer-brand p{font-size:0.875rem;color:var(--grey);line-height:1.7;margin-top:0.75rem;max-width:280px}
+.footer-col h4{font-size:0.8rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:0.6rem}
+.footer-col ul li a{color:var(--grey);text-decoration:none;font-size:0.875rem;transition:color var(--transition)}
+.footer-col ul li a:hover{color:var(--ivory)}
+.footer-bottom{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:gap;border-top:1px solid rgba(200,155,75,0.1);padding-top:2rem;gap:1rem}
+.footer-bottom p{font-size:0.8rem;color:var(--grey2)}
+
+/* ── FLOATING ORDER BTN ── */
+.float-order{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--gold);color:var(--charcoal);padding:0.85rem 1.5rem;border-radius:50px;font-weight:700;font-size:0.85rem;text-decoration:none;box-shadow:0 8px 30px rgba(200,155,75,0.4);z-index:999;display:none;align-items:center;gap:8px;transition:all var(--transition);letter-spacing:0.03em}
+.float-order:hover{background:var(--gold-light);transform:translateY(-3px);box-shadow:0 12px 40px rgba(200,155,75,0.5)}
+@media(max-width:768px){.float-order{display:flex}}
+
+/* ── ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+
+/* ── DIVIDER ── */
+.gold-divider{width:60px;height:2px;background:linear-gradient(90deg,var(--gold),rgba(200,155,75,0.3));margin:1.5rem 0}
+
+/* ── ACTIVE PAGE ── */
+.page{display:none}
+.page.active{display:block}
+#home.active{display:block}
+
+/* ── BEV ITEMS ── */
+.bev-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:0.75rem}
+.bev-item{background:var(--charcoal3);border:1px solid rgba(200,155,75,0.08);border-radius:var(--radius-sm);padding:0.85rem 1.1rem;font-size:0.875rem;color:var(--ivory3);transition:all var(--transition)}
+.bev-item:hover{border-color:rgba(200,155,75,0.25);color:var(--ivory)}
+
+@media(max-width:640px){
+  section{padding:70px 5%}
+  .menu-items{grid-template-columns:1fr}
+  .exp-grid{grid-template-columns:1fr}
+  .ig-grid{grid-template-columns:repeat(3,1fr)}
+  .testi-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#" onclick="showPage('home')">Fla<span>verse</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#" onclick="showPage('home');closeMenu()">Home</a></li>
+      <li><a href="#" onclick="showPage('menu');closeMenu()">Menu</a></li>
+      <li><a href="#" onclick="showPage('about');closeMenu()">About</a></li>
+      <li><a href="#" onclick="showPage('visit');closeMenu()">Visit Us</a></li>
+    </ul>
+    <a class="nav-cta" href="tel:+919156363343">Order Now</a>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- FLOATING ORDER BUTTON -->
+<a class="float-order" href="tel:+919156363343">🛵 Order Now</a>
+
+<!-- ════════════════════════════════════════ HOME PAGE ════════════════════════════════════════ -->
+<div id="home" class="page active">
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-particles" id="particles"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Cloud Kitchen · Kothrud, Pune</div>
+      <h1 class="hero-title">Bold Flavours.<br><em>Delivered Fresh.</em></h1>
+      <p class="hero-sub">Authentic North Indian, Mughlai, Seafood, Chinese and Biryani specialties crafted with rich ingredients, traditional recipes, and unforgettable taste—right to your door.</p>
+      <div class="btn-group">
+        <a class="btn-primary" href="tel:+919156363343">🛵 Order Now</a>
+        <a class="btn-outline" href="#" onclick="showPage('menu');return false">Explore Menu →</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-badge">Freshly Prepared Daily</div>
+        <div class="trust-badge">Fast Delivery</div>
+        <div class="trust-badge">Takeaway Available</div>
+        <div class="trust-badge">Lunch & Dinner</div>
+        <div class="trust-badge">Customer Favourite in Kothrud</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUISINE CATEGORIES -->
+<section id="categories">
+  <div class="container">
+    <div class="section-label">Our Cuisines</div>
+    <h2 class="section-title">Five Worlds of Flavour</h2>
+    <div class="cats-grid">
+      <div class="cat-card reveal">
+        <span class="cat-icon">🍛</span>
+        <div class="cat-name">North Indian</div>
+        <div class="cat-desc">Rich gravies & tandoor</div>
+      </div>
+      <div class="cat-card reveal reveal-delay-1">
+        <span class="cat-icon">🫕</span>
+        <div class="cat-name">Mughlai</div>
+        <div class="cat-desc">Royal aromatic classics</div>
+      </div>
+      <div class="cat-card reveal reveal-delay-2">
+        <span class="cat-icon">🍜</span>
+        <div class="cat-name">Chinese</div>
+        <div class="cat-desc">Indo-Chinese favourites</div>
+      </div>
+      <div class="cat-card reveal reveal-delay-3">
+        <span class="cat-icon">🦐</span>
+        <div class="cat-name">Seafood</div>
+        <div class="cat-desc">Coastal Goan & Malwani</div>
+      </div>
+      <div class="cat-card reveal">
+        <span class="cat-icon">🍚</span>
+        <div class="cat-name">Biryani</div>
+        <div class="cat-desc">Dum-cooked perfection</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section id="why">
+  <div class="container">
+    <div class="section-label">Why Flaverse</div>
+    <h2 class="section-title">Crafted for People<br>Who Love Real Food</h2>
+    <p class="section-sub">We don't cut corners—every dish is made fresh, with quality ingredients and recipes that have stood the test of time.</p>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-card-icon">🌿</div>
+        <h3>Fresh Ingredients</h3>
+        <p>Sourced daily. No frozen shortcuts. Your meal is made when you order it.</p>
+        <div class="accent-line"></div>
+      </div>
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-card-icon">📖</div>
+        <h3>Authentic Recipes</h3>
+        <p>Traditional techniques from North Indian, Mughlai and Coastal kitchens preserved in every bite.</p>
+        <div class="accent-line"></div>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-card-icon">✨</div>
+        <h3>Rich Flavours</h3>
+        <p>Bold spices, slow-cooked gravies, and the kind of depth that keeps you coming back.</p>
+        <div class="accent-line"></div>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-card-icon">🧼</div>
+        <h3>Hygienic Preparation</h3>
+        <p>A clean, well-run cloud kitchen. Standards you can taste.</p>
+        <div class="accent-line"></div>
+      </div>
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-card-icon">⚡</div>
+        <h3>Quick Delivery</h3>
+        <p>Serving Kothrud and nearby Pune localities with speed that doesn't sacrifice quality.</p>
+        <div class="accent-line"></div>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-card-icon">💰</div>
+        <h3>Affordable Meals</h3>
+        <p>Satisfying meals with an average order of just ₹200. Great food shouldn't break the bank.</p>
+        <div class="accent-line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR MENU -->
+<section id="popular">
+  <div class="container">
+    <div class="section-label">Must Try</div>
+    <h2 class="section-title">Our Popular Dishes</h2>
+    <p class="section-sub">The dishes our customers order again and again—and for good reason.</p>
+    <div class="menu-grid">
+      <div class="menu-card reveal">
+        <div class="menu-card-img" style="background:linear-gradient(135deg,#2D1810,#1A0E08)">🍚</div>
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Biryani · Non-Veg</div>
+          <div class="menu-card-name">Chicken Dum Biryani</div>
+          <div class="menu-card-desc">Slow-cooked in a sealed pot with whole spices, saffron-touched basmati, and tender chicken.</div>
+          <div class="menu-card-footer">
+            <div class="menu-card-price">Best Seller</div>
+            <button class="menu-card-btn" onclick="showPage('menu')">Order</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-1">
+        <div class="menu-card-img" style="background:linear-gradient(135deg,#2A1200,#180A00)">🫕</div>
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Main Course · Non-Veg</div>
+          <div class="menu-card-name">Double Butter Chicken</div>
+          <div class="menu-card-desc">Velvety tomato-butter gravy with a double richness that makes it utterly indulgent.</div>
+          <div class="menu-card-footer">
+            <div class="menu-card-price">Customer Fave</div>
+            <button class="menu-card-btn" onclick="showPage('menu')">Order</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-2">
+        <div class="menu-card-img" style="background:linear-gradient(135deg,#1A2010,#0E1508)">🌿</div>
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Main Course · Veg</div>
+          <div class="menu-card-name">Smoked Matka Paneer</div>
+          <div class="menu-card-desc">Paneer cooked in a clay pot with a signature smoky finish—uniquely Flaverse.</div>
+          <div class="menu-card-footer">
+            <div class="menu-card-price">Signature</div>
+            <button class="menu-card-btn" onclick="showPage('menu')">Order</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card reveal">
+        <div class="menu-card-img" style="background:linear-gradient(135deg,#1A0A00,#250E00)">🍗</div>
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Main Course · Non-Veg</div>
+          <div class="menu-card-name">Chicken Tikka Masala</div>
+          <div class="menu-card-desc">Tandoor-kissed tikka pieces in a robust, fragrant masala gravy.</div>
+          <div class="menu-card-footer">
+            <div class="menu-card-price">Classic</div>
+            <button class="menu-card-btn" onclick="showPage('menu')">Order</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-1">
+        <div class="menu-card-img" style="background:linear-gradient(135deg,#201018,#150A10)">🧀</div>
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Main Course · Veg</div>
+          <div class="menu-card-name">Paneer Lababdar</div>
+          <div class="menu-card-desc">Silky onion-tomato gravy with cashew richness and melt-in-the-mouth paneer.</div>
+          <div class="menu-card-footer">
+            <div class="menu-card-price">Popular</div>
+            <button class="menu-card-btn" onclick="showPage('menu')">Order</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-2">
+        <div class="menu-card-img" style="background:linear-gradient(135deg,#101A20,#081015)">🐟</div>
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Seafood · Non-Veg</div>
+          <div class="menu-card-name">Goan Fish Curry</div>
+          <div class="menu-card-desc">Tangy coastal coconut curry with a flavour that transports you straight to Goa.</div>
+          <div class="menu-card-footer">
+            <div class="menu-card-price">Coastal Special</div>
+            <button class="menu-card-btn" onclick="showPage('menu')">Order</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card reveal">
+        <div class="menu-card-img" style="background:linear-gradient(135deg,#1E1008,#120A00)">🐑</div>
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Main Course · Non-Veg</div>
+          <div class="menu-card-name">Mutton Rogan Josh</div>
+          <div class="menu-card-desc">Kashmiri-inspired red curry with tender mutton slow-cooked in whole aromatic spices.</div>
+          <div class="menu-card-footer">
+            <div class="menu-card-price">Mughlai Pick</div>
+            <button class="menu-card-btn" onclick="showPage('menu')">Order</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card reveal reveal-delay-1">
+        <div class="menu-card-img" style="background:linear-gradient(135deg,#141410,#0A0A08)">🚀</div>
+        <div class="menu-card-body">
+          <div class="menu-card-tag">Biryani · Non-Veg</div>
+          <div class="menu-card-name">Chicken Tikka Biryani</div>
+          <div class="menu-card-desc">Marinated tikka layered into fragrant basmati for a biryani you won't forget.</div>
+          <div class="menu-card-footer">
+            <div class="menu-card-price">Must Try</div>
+            <button class="menu-card-btn" onclick="showPage('menu')">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem">
+      <a class="btn-primary" href="#" onclick="showPage('menu');return false">View Full Menu →</a>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="instagram" style="background:var(--charcoal2)">
+  <div class="container">
+    <div class="section-label">@flaverse_pune</div>
+    <h2 class="section-title">See What's Cooking</h2>
+    <p class="section-sub">Follow us on Instagram for daily specials, behind-the-scenes kitchen moments, and more.</p>
+    <div class="ig-grid reveal">
+      <div class="ig-tile" style="background:linear-gradient(135deg,#2D1810,#1A0E08)"><span>🍚</span><div class="ig-overlay"><span>View Post</span></div></div>
+      <div class="ig-tile" style="background:linear-gradient(135deg,#1A1A10,#100E08)"><span>🫕</span><div class="ig-overlay"><span>View Post</span></div></div>
+      <div class="ig-tile" style="background:linear-gradient(135deg,#10181A,#080F12)"><span>🐟</span><div class="ig-overlay"><span>View Post</span></div></div>
+      <div class="ig-tile" style="background:linear-gradient(135deg,#1A1020,#100815)"><span>🍗</span><div class="ig-overlay"><span>View Post</span></div></div>
+      <div class="ig-tile" style="background:linear-gradient(135deg,#181A10,#0F1008)"><span>🌿</span><div class="ig-overlay"><span>View Post</span></div></div>
+      <div class="ig-tile" style="background:linear-gradient(135deg,#20100A,#150800)"><span>🍜</span><div class="ig-overlay"><span>View Post</span></div></div>
+    </div>
+    <div style="text-align:center;margin-top:2rem">
+      <a class="btn-outline" href="https://www.instagram.com/flaverse_pune" target="_blank" rel="noopener">Follow on Instagram ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-label">Our Customers</div>
+    <h2 class="section-title">Food That Speaks<br>Through Flavour</h2>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">The Chicken Dum Biryani is absolutely phenomenal. Rich, aromatic, and packed with flavour. Delivery was surprisingly fast to Kothrud. Will be ordering every week!</p>
+        <div class="testi-author">
+          <div class="testi-avatar">RS</div>
+          <div>
+            <div class="testi-name">Rohit S.</div>
+            <div class="testi-loc">Dahanukar Colony, Pune</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">Smoked Matka Paneer and Paneer Lababdar together—a combination I never knew I needed. The Flaverse menu is so well thought out. Quality is always consistent.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">PM</div>
+          <div>
+            <div class="testi-name">Priya M.</div>
+            <div class="testi-loc">Kothrud, Pune</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">Ordered Goan Fish Curry for the first time and couldn't believe it came from a cloud kitchen. Tasted like a proper coastal restaurant. Highly recommend for seafood lovers!</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AK</div>
+          <div>
+            <div class="testi-name">Aditya K.</div>
+            <div class="testi-loc">Pune</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="cta-banner">
+  <div class="container" style="max-width:700px">
+    <div class="section-label" style="justify-content:center">Ready to Order?</div>
+    <h2>Your Next Favourite Meal<br>is One Call Away</h2>
+    <p style="margin-top:0.75rem">Home delivery & takeaway from Kothrud, Pune. Lunch and dinner service daily.</p>
+    <div class="btn-group" style="margin-top:2rem;justify-content:center">
+      <a class="btn-primary" href="tel:+919156363343">📞 Call Now · +91 91563 63343</a>
+      <a class="btn-outline" href="https://maps.google.com/?q=CTS+585+Shop+5+Hemantshree+Apartment+Dahanukar+Colony+Kothrud+Pune" target="_blank">📍 Get Directions</a>
+    </div>
+  </div>
+</section>
+
+</div><!-- /home -->
+
+<!-- ════════════════════════════════════════ MENU PAGE ════════════════════════════════════════ -->
+<div id="menu" class="page">
+<section style="padding-top:110px;background:var(--charcoal)">
+  <div class="container">
+    <div class="section-label">Full Menu</div>
+    <h2 class="section-title" style="margin-bottom:0.5rem">What Would You Like Today?</h2>
+    <p style="margin-bottom:2rem">Prices vary — call us or visit Swiggy/Zomato for current pricing.</p>
+
+    <input class="menu-search" type="text" id="menuSearch" placeholder="🔍  Search any dish..." oninput="filterMenu(this.value)">
+
+    <div class="menu-top-tabs">
+      <button class="top-tab active" onclick="switchMainTab(this,'food')">🍽 Food</button>
+      <button class="top-tab" onclick="switchMainTab(this,'bev')">🥤 Beverages</button>
+    </div>
+
+    <!-- FOOD SECTION -->
+    <div id="tab-food">
+      <div class="sub-tabs">
+        <button class="sub-tab active" onclick="switchSubTab(this,'veg')">🟢 Veg</button>
+        <button class="sub-tab" onclick="switchSubTab(this,'nonveg')">🔴 Non-Veg</button>
+      </div>
+
+      <!-- VEG -->
+      <div id="subtab-veg">
+        <div class="cat-tabs">
+          <button class="cat-tab active" onclick="scrollToSec('v-starters')">Starters</button>
+          <button class="cat-tab" onclick="scrollToSec('v-chinese-starters')">Chinese Starters</button>
+          <button class="cat-tab" onclick="scrollToSec('v-main')">Main Course</button>
+          <button class="cat-tab" onclick="scrollToSec('v-chinese')">Chinese Rice & Noodles</button>
+          <button class="cat-tab" onclick="scrollToSec('v-dal')">Dal</button>
+          <button class="cat-tab" onclick="scrollToSec('v-rice')">Rice & Biryani</button>
+          <button class="cat-tab" onclick="scrollToSec('v-breads')">Breads</button>
+          <button class="cat-tab" onclick="scrollToSec('v-dessert')">Dessert</button>
+        </div>
+
+        <div id="v-starters" class="menu-section">
+          <div class="menu-section-title">Starters <span>Veg</span></div>
+          <div class="menu-items" id="v-starters-list">
+            <!-- JS populated -->
+          </div>
+        </div>
+        <div id="v-chinese-starters" class="menu-section">
+          <div class="menu-section-title">Chinese Starters <span>Veg</span></div>
+          <div class="menu-items" id="v-cs-list"></div>
+        </div>
+        <div id="v-main" class="menu-section">
+          <div class="menu-section-title">Main Course <span>Veg</span></div>
+          <div class="menu-items" id="v-main-list"></div>
+        </div>
+        <div id="v-chinese" class="menu-section">
+          <div class="menu-section-title">Chinese Rice &amp; Noodles <span>Veg</span></div>
+          <div class="menu-items" id="v-chinese-list"></div>
+        </div>
+        <div id="v-dal" class="menu-section">
+          <div class="menu-section-title">Dal <span>Veg</span></div>
+          <div class="menu-items" id="v-dal-list"></div>
+        </div>
+        <div id="v-rice" class="menu-section">
+          <div class="menu-section-title">Rice &amp; Biryani <span>Veg</span></div>
+          <div class="menu-items" id="v-rice-list"></div>
+        </div>
+        <div id="v-breads" class="menu-section">
+          <div class="menu-section-title">Indian Breads <span>Veg</span></div>
+          <div class="menu-items" id="v-breads-list"></div>
+        </div>
+        <div id="v-dessert" class="menu-section">
+          <div class="menu-section-title">Dessert <span>Veg</span></div>
+          <div class="menu-items" id="v-dessert-list"></div>
+        </div>
+      </div>
+
+      <!-- NON-VEG -->
+      <div id="subtab-nonveg" style="display:none">
+        <div class="cat-tabs">
+          <button class="cat-tab active" onclick="scrollToSec('nv-snacks')">Snacks</button>
+          <button class="cat-tab" onclick="scrollToSec('nv-soups')">Soups</button>
+          <button class="cat-tab" onclick="scrollToSec('nv-starters')">Starters</button>
+          <button class="cat-tab" onclick="scrollToSec('nv-seafood-s')">Seafood Starters</button>
+          <button class="cat-tab" onclick="scrollToSec('nv-chinese-s')">Chinese Starters</button>
+          <button class="cat-tab" onclick="scrollToSec('nv-chinese')">Chinese Rice &amp; Noodles</button>
+          <button class="cat-tab" onclick="scrollToSec('nv-chicken')">Chicken</button>
+          <button class="cat-tab" onclick="scrollToSec('nv-mutton')">Mutton</button>
+          <button class="cat-tab" onclick="scrollToSec('nv-egg')">Egg</button>
+          <button class="cat-tab" onclick="scrollToSec('nv-seafood')">Seafood</button>
+          <button class="cat-tab" onclick="scrollToSec('nv-biryani')">Biryani</button>
+        </div>
+        <div id="nv-snacks" class="menu-section"><div class="menu-section-title">Snacks <span>Non-Veg</span></div><div class="menu-items" id="nv-snacks-list"></div></div>
+        <div id="nv-soups" class="menu-section"><div class="menu-section-title">Soups <span>Non-Veg</span></div><div class="menu-items" id="nv-soups-list"></div></div>
+        <div id="nv-starters" class="menu-section"><div class="menu-section-title">Chicken &amp; Mutton Starters <span>Non-Veg</span></div><div class="menu-items" id="nv-starters-list"></div></div>
+        <div id="nv-seafood-s" class="menu-section"><div class="menu-section-title">Seafood Starters <span>Non-Veg</span></div><div class="menu-items" id="nv-seafood-s-list"></div></div>
+        <div id="nv-chinese-s" class="menu-section"><div class="menu-section-title">Chinese Starters <span>Non-Veg</span></div><div class="menu-items" id="nv-chinese-s-list"></div></div>
+        <div id="nv-chinese" class="menu-section"><div class="menu-section-title">Chinese Rice &amp; Noodles <span>Non-Veg</span></div><div class="menu-items" id="nv-chinese-list"></div></div>
+        <div id="nv-chicken" class="menu-section"><div class="menu-section-title">Chicken Main Course <span>Non-Veg</span></div><div class="menu-items" id="nv-chicken-list"></div></div>
+        <div id="nv-mutton" class="menu-section"><div class="menu-section-title">Mutton Main Course <span>Non-Veg</span></div><div class="menu-items" id="nv-mutton-list"></div></div>
+        <div id="nv-egg" class="menu-section"><div class="menu-section-title">Egg Specialities <span>Non-Veg</span></div><div class="menu-items" id="nv-egg-list"></div></div>
+        <div id="nv-seafood" class="menu-section"><div class="menu-section-title">Seafood Main Course <span>Non-Veg</span></div><div class="menu-items" id="nv-seafood-list"></div></div>
+        <div id="nv-biryani" class="menu-section"><div class="menu-section-title">Rice &amp; Biryani <span>Non-Veg</span></div><div class="menu-items" id="nv-biryani-list"></div></div>
+      </div>
+    </div>
+
+    <!-- BEVERAGES SECTION -->
+    <div id="tab-bev" style="display:none">
+      <div class="menu-section">
+        <div class="menu-section-title">Beverages</div>
+        <div class="bev-grid" id="bev-list"></div>
+      </div>
+    </div>
+
+    <div style="margin-top:3rem;padding:2rem;background:var(--charcoal3);border:1px solid rgba(200,155,75,0.15);border-radius:var(--radius);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+      <div>
+        <div style="font-family:var(--serif);font-size:1.1rem;color:var(--ivory);margin-bottom:0.25rem">Ready to order?</div>
+        <div style="font-size:0.875rem;color:var(--grey)">Call us or place your order via Swiggy / Zomato</div>
+      </div>
+      <a class="btn-primary" href="tel:+919156363343">📞 Call · +91 91563 63343</a>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ════════════════════════════════════════ ABOUT PAGE ════════════════════════════════════════ -->
+<div id="about" class="page">
+<section style="padding-top:110px;background:var(--charcoal)">
+  <div class="container">
+    <div class="about-hero reveal">
+      <div class="section-label">Our Story</div>
+      <h1 style="font-size:clamp(1.8rem,4vw,3rem);color:var(--ivory);margin-bottom:1.25rem">Every Dish Begins With<br>A Passion For Great Taste</h1>
+      <p style="font-size:1rem;max-width:650px;line-height:1.9;color:var(--grey)">Flaverse brings together beloved Indian flavours and modern favourites under one roof. From rich Mughlai curries and aromatic biryanis to comforting Chinese and seafood specialties, every dish is prepared with care, consistency, and attention to flavour. Based in Kothrud, Pune—we're a cloud kitchen built for the people who know that great food doesn't need a fancy address.</p>
+    </div>
+
+    <div class="gold-divider"></div>
+    <div class="section-label">What We Stand For</div>
+    <h2 class="section-title">Our Values</h2>
+    <div class="values-grid">
+      <div class="value-card reveal"><div class="icon">🌿</div><h3>Quality Ingredients</h3><p>Only fresh, carefully chosen ingredients go into every dish we prepare.</p></div>
+      <div class="value-card reveal reveal-delay-1"><div class="icon">📖</div><h3>Authentic Taste</h3><p>Recipes rooted in tradition, perfected through experience and love of food.</p></div>
+      <div class="value-card reveal reveal-delay-2"><div class="icon">🧼</div><h3>Hygienic Preparation</h3><p>A clean kitchen is non-negotiable. We maintain the highest standards of food safety.</p></div>
+      <div class="value-card reveal"><div class="icon">⚡</div><h3>Fast Service</h3><p>Quick delivery and takeaway that doesn't make you wait longer than needed.</p></div>
+      <div class="value-card reveal reveal-delay-1"><div class="icon">❤️</div><h3>Customer Satisfaction</h3><p>Every order matters. We cook for people who care about what they eat.</p></div>
+    </div>
+
+    <div class="gold-divider" style="margin-top:3rem"></div>
+    <div class="section-label">What We Offer</div>
+    <h2 class="section-title">The Flaverse Experience</h2>
+    <div class="exp-grid reveal">
+      <div class="exp-item"><div class="icon">🕛</div><p>Lunch &amp; Dinner Service — available daily</p></div>
+      <div class="exp-item"><div class="icon">🛵</div><p>Home Delivery — right to your doorstep</p></div>
+      <div class="exp-item"><div class="icon">🛍️</div><p>Takeaway Available — pack it and go</p></div>
+      <div class="exp-item"><div class="icon">🍽️</div><p>Diverse Multi-Cuisine Menu — 5 cuisine styles</p></div>
+    </div>
+
+    <div style="margin-top:3rem;text-align:center">
+      <a class="btn-primary" href="tel:+919156363343" style="margin-right:1rem">Order Now</a>
+      <a class="btn-outline" href="#" onclick="showPage('menu');return false">Explore Menu</a>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ════════════════════════════════════════ VISIT PAGE ════════════════════════════════════════ -->
+<div id="visit" class="page">
+<section style="padding-top:110px;background:var(--charcoal)">
+  <div class="container">
+    <div class="section-label">Find Us</div>
+    <h1 style="font-size:clamp(2rem,5vw,3.2rem);color:var(--ivory);margin-bottom:0.5rem">Order. Pick Up. Enjoy.</h1>
+    <p style="color:var(--grey);margin-bottom:3rem;font-size:1rem">We're a cloud kitchen in the heart of Kothrud, Pune—with home delivery and takeaway available.</p>
+
+    <div class="visit-grid">
+      <div>
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2!2d73.8167!3d18.5083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMwJzMwLjAiTiA3M8KwNDknMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Flaverse location map">
+          </iframe>
+        </div>
+        <div style="margin-top:1rem;padding:1rem;background:var(--charcoal3);border:1px solid rgba(200,155,75,0.12);border-radius:var(--radius-sm)">
+          <div style="font-size:0.75rem;color:var(--gold);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem">Address</div>
+          <p style="font-size:0.9rem;color:var(--ivory3);line-height:1.8">CTS 585, Shop 5, Survey 26, Plot 62,<br>Ground Floor, Hemantshree Apartment,<br>Dahanukar Colony, Lane 8,<br>Kothrud, Pune</p>
+          <a href="https://maps.google.com/?q=CTS+585+Shop+5+Hemantshree+Apartment+Dahanukar+Colony+Kothrud+Pune" target="_blank" class="btn-outline" style="display:inline-flex;margin-top:1rem;padding:0.6rem 1.2rem;font-size:0.8rem">📍 Open in Google Maps ↗</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div class="contact-detail-text">
+            <label>Phone</label>
+            <p><a href="tel:+919156363343" style="color:var(--ivory3);text-decoration:none">+91 91563 63343</a></p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🛵</div>
+          <div class="contact-detail-text">
+            <label>Services</label>
+            <div class="service-pills" style="margin-top:6px">
+              <div class="service-pill">Home Delivery</div>
+              <div class="service-pill">Takeaway</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🕐</div>
+          <div class="contact-detail-text">
+            <label>Service Hours</label>
+            <table class="hours-table" style="margin-top:6px">
+              <tr><td>Lunch</td><td style="text-align:right"><span class="hours-badge">Open</span></td></tr>
+              <tr><td>Dinner</td><td style="text-align:right"><span class="hours-badge">Open</span></td></tr>
+              <tr><td style="font-size:0.8rem">No dine-in seating</td><td></td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div class="contact-detail-text">
+            <label>Area Served</label>
+            <p>Kothrud & nearby Pune localities</p>
+          </div>
+        </div>
+        <div class="visit-btn-group" style="margin-top:0.5rem">
+          <a class="visit-btn primary" href="tel:+919156363343">📞 Call Now</a>
+          <a class="visit-btn secondary" href="https://maps.google.com/?q=Hemantshree+Apartment+Dahanukar+Colony+Kothrud+Pune" target="_blank">📍 Get Directions</a>
+          <a class="visit-btn secondary" href="tel:+919156363343">🛵 Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:4rem">
+      <div class="section-label">Follow Along</div>
+      <h2 class="section-title">Join Our Food Journey</h2>
+      <p class="section-sub">Daily specials, fresh arrivals, and behind-the-scenes moments from our kitchen.</p>
+      <div class="ig-grid reveal" style="max-width:500px">
+        <div class="ig-tile" style="background:linear-gradient(135deg,#2D1810,#1A0E08)"><span>🍚</span><div class="ig-overlay"><span>Follow</span></div></div>
+        <div class="ig-tile" style="background:linear-gradient(135deg,#1A1A10,#100E08)"><span>🫕</span><div class="ig-overlay"><span>Follow</span></div></div>
+        <div class="ig-tile" style="background:linear-gradient(135deg,#10181A,#080F12)"><span>🍜</span><div class="ig-overlay"><span>Follow</span></div></div>
+      </div>
+      <div style="margin-top:1.5rem">
+        <a class="btn-outline" href="https://www.instagram.com/flaverse_pune" target="_blank">Follow on Instagram ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ════════════════════════════════════════ FOOTER ════════════════════════════════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div style="font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--ivory)">Fla<span style="color:var(--gold)">verse</span></div>
+      <p>Bold Flavours. Delivered Fresh. Cloud kitchen serving authentic North Indian, Mughlai, Chinese, Seafood &amp; Biryani from Kothrud, Pune.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#" onclick="showPage('home')">Home</a></li>
+        <li><a href="#" onclick="showPage('menu')">Menu</a></li>
+        <li><a href="#" onclick="showPage('about')">About Us</a></li>
+        <li><a href="#" onclick="showPage('visit')">Visit Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Cuisine</h4>
+      <ul>
+        <li><a href="#" onclick="showPage('menu')">North Indian</a></li>
+        <li><a href="#" onclick="showPage('menu')">Mughlai</a></li>
+        <li><a href="#" onclick="showPage('menu')">Chinese</a></li>
+        <li><a href="#" onclick="showPage('menu')">Seafood</a></li>
+        <li><a href="#" onclick="showPage('menu')">Biryani</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+919156363343">+91 91563 63343</a></li>
+        <li><a href="https://www.instagram.com/flaverse_pune" target="_blank">Instagram ↗</a></li>
+        <li><a href="https://maps.google.com/?q=Hemantshree+Apartment+Dahanukar+Colony+Kothrud+Pune" target="_blank">Directions ↗</a></li>
+      </ul>
+      <div style="margin-top:1.25rem;font-size:0.78rem;color:var(--grey2);line-height:1.7">
+        Dahanukar Colony, Lane 8<br>Kothrud, Pune
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Flaverse. All rights reserved. Cloud Kitchen, Kothrud, Pune.</p>
+    <p style="color:var(--grey2)">Home Delivery · Takeaway · Lunch & Dinner</p>
+  </div>
+</footer>
+
+<script>
+const menuData = {
+  'v-starters': ['Masala Papad','Aloo Cheese Open Crunch','Makai Aloo Cutlet','Hara Bhara Kebab','Soya Chaap','Mushroom','Oriental Style Stuffed Mushroom','Honey Chilli Potato','Veg Platter','Papad','Paneer Tikka'],
+  'v-cs': ['Veg Crispy','Paneer','Veg Manchurian'],
+  'v-main': ['Rasoi Ki Shaan','Veg Kadhai','Veg Kolhapuri','Veg Bhuna','Veg Maratha','Kumbh Ki Najakat','Mushroom Masala','Smoked Matka Paneer','Corn Paneer Ka Twist','Paneer Kadhai','Paneer Lababdar','Paneer Lasooni Palak','Paneer Bhurji','Paneer Kaju Masala','Kaju Masala','Dingri Mattar Hara Pyaz','Soya Chaap Masala','Aloo Gobi Adraki','Bhindi Masala','Baingan Masala','Sarson Ka Saag','Vilayati Sabzi'],
+  'v-chinese': ['Veg Fried Rice','Veg Schezwan Fried Rice','Veg Hakka Noodles','Veg Schezwan Hakka Noodles','Veg Singapori Rice','Veg Burnt Garlic Rice','Veg Burnt Garlic Noodles','Veg Triple Schezwan Rice'],
+  'v-dal': ['Dal Fry','Dal Tadka','Dal Methi'],
+  'v-rice': ['Steam Rice','Jeera Rice','Dal Khichadi','Veg Pulao','Green Peas Pulao','Veg Biryani','Paneer Tikka Biryani'],
+  'v-breads': ['Wheat Roti','Cheese Chilli Naan','Cheese Chilli Garlic Naan','Garlic Naan','Makai Roti Butter','Assorted Roti Basket','Aloo Paratha','Paneer Paratha','Maida Roti','Lachha Paratha','Naan','Kulcha','Wheat Naan Butter','Wheat Naan Plain'],
+  'v-dessert': ['Gulab Jamun'],
+  'nv-snacks': ['Kurkure Momos','Omelette Plain','Egg Bhurji','French Fries','Fried Momos','Steamed Momos','Masala Omelette','Masala Cheese Omelette','Half Egg Fry','Boiled Eggs'],
+  'nv-soups': ['Manchow Soup','Mutton Paya Soup','Sweet Corn Soup','Lemon Coriander Soup','Hot N Sour Soup'],
+  'nv-starters': ['Mutton Sukka','Chicken Popcorn','Chicken Sukka','Chicken Seekh Kebab','Murgh Tangdi Kebab','Tandoor Chicken Tikka','Chicken Platter','Chicken Tikka','Tandoor Chicken'],
+  'nv-seafood-s': ['Kolkata Fish Cutlet','Fish Platter','Prawns','Pomfret','Surmai'],
+  'nv-chinese-s': ['Chicken Manchurian','Chicken','Chicken Lollipop'],
+  'nv-chinese': ['Egg Fried Rice','Egg Schezwan Fried Rice','Egg Triple Schezwan Rice','Chicken Fried Rice','Chicken Schezwan Fried Rice','Chicken Hakka Noodles','Chicken Schezwan Hakka Noodles','Chicken Singapori Rice','Chicken Burnt Garlic Rice','Chicken Burnt Garlic Noodles','Chicken Boxer Rice','Chicken Triple Schezwan Rice'],
+  'nv-chicken': ['Double Butter Chicken','Smoked Matka Chicken','Chettinad Chicken','Kadhai Chicken','Chicken Patiyala','Chicken Tikka Masala','Chicken Banjara Masala','Chicken Curry','Chicken RaRa','Chicken Keema','Chicken Kolhapuri','Chicken Handi','Chicken Malwani Handi','Murgh Mussalam'],
+  'nv-mutton': ['Mutton Rogan Josh','Mutton RaRa','Mutton Kolhapuri','Mutton Curry','Mutton Handi'],
+  'nv-egg': ['Anda Curry','Anda Masala','Boiled Egg Bhurji'],
+  'nv-seafood': ['Goan Fish Curry','Malwani Fish Curry'],
+  'nv-biryani': ['Egg Biryani','Chicken Dum Biryani','Chicken Hyderabadi Biryani','Chicken Tikka Biryani','Mutton Dum Biryani','Mutton Hyderabadi Biryani','Prawns Biryani','Surmai Biryani','Pomfret Biryani'],
+  'bev': ['Tea','Instant Hot Coffee','Kokam Sarbat','Jaljeera Soda','Virgin Mojito','Aerated Soft Drinks','Fresh Lime','Lassi','Packaged Mineral Water','Chaas (Masala)','Chaas (Plain)','Special Lassi']
+};
+
+const vegKeys = ['v-starters','v-cs','v-main','v-chinese','v-dal','v-rice','v-breads','v-dessert'];
+const nonvegKeys = ['nv-snacks','nv-soups','nv-starters','nv-seafood-s','nv-chinese-s','nv-chinese','nv-chicken','nv-mutton','nv-egg','nv-seafood','nv-biryani'];
+
+const idMap = {
+  'v-starters':'v-starters-list','v-cs':'v-cs-list','v-main':'v-main-list','v-chinese':'v-chinese-list','v-dal':'v-dal-list','v-rice':'v-rice-list','v-breads':'v-breads-list','v-dessert':'v-dessert-list',
+  'nv-snacks':'nv-snacks-list','nv-soups':'nv-soups-list','nv-starters':'nv-starters-list','nv-seafood-s':'nv-seafood-s-list','nv-chinese-s':'nv-chinese-s-list','nv-chinese':'nv-chinese-list','nv-chicken':'nv-chicken-list','nv-mutton':'nv-mutton-list','nv-egg':'nv-egg-list','nv-seafood':'nv-seafood-list','nv-biryani':'nv-biryani-list'
+};
+
+function isVeg(key){return vegKeys.includes(key)}
+
+function renderAll(){
+  for(const [key, items] of Object.entries(menuData)){
+    if(key==='bev') continue;
+    const elId = idMap[key];
+    if(!elId) continue;
+    const el = document.getElementById(elId);
+    if(!el) continue;
+    const type = isVeg(key)?'veg':'nonveg';
+    el.innerHTML = items.map(name=>`<div class="menu-item"><div class="menu-item-dot ${type}"></div><div class="menu-item-name">${name}</div></div>`).join('');
+  }
+  const bevEl = document.getElementById('bev-list');
+  if(bevEl) bevEl.innerHTML = menuData['bev'].map(b=>`<div class="bev-item">${b}</div>`).join('');
+}
+
+function filterMenu(q){
+  q = q.toLowerCase().trim();
+  for(const [key, items] of Object.entries(menuData)){
+    if(key==='bev') continue;
+    const elId = idMap[key];
+    if(!elId) continue;
+    const el = document.getElementById(elId);
+    if(!el) continue;
+    const type = isVeg(key)?'veg':'nonveg';
+    const filtered = q?items.filter(i=>i.toLowerCase().includes(q)):items;
+    el.innerHTML = filtered.map(name=>`<div class="menu-item"><div class="menu-item-dot ${type}"></div><div class="menu-item-name">${name}</div></div>`).join('');
+    const sec = el.closest('.menu-section');
+    if(sec) sec.style.display = filtered.length?'':'none';
+  }
+  if(menuData['bev']){
+    const bevEl = document.getElementById('bev-list');
+    const bevFiltered = q?menuData['bev'].filter(i=>i.toLowerCase().includes(q)):menuData['bev'];
+    if(bevEl) bevEl.innerHTML = bevFiltered.map(b=>`<div class="bev-item">${b}</div>`).join('');
+  }
+}
+
+function switchMainTab(btn, tab){
+  document.querySelectorAll('.top-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-food').style.display = tab==='food'?'':'none';
+  document.getElementById('tab-bev').style.display = tab==='bev'?'':'none';
+}
+
+function switchSubTab(btn, sub){
+  document.querySelectorAll('.sub-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('subtab-veg').style.display = sub==='veg'?'':'none';
+  document.getElementById('subtab-nonveg').style.display = sub==='nonveg'?'':'none';
+}
+
+function scrollToSec(id){
+  const el = document.getElementById(id);
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function showPage(page){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const el = document.getElementById(page);
+  if(el) el.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  // Lazy render
+  if(page==='menu') renderAll();
+}
+
+function toggleMenu(){
+  document.getElementById('navLinks').classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('navLinks').classList.remove('open');
+}
+
+// Particles
+function createParticles(){
+  const container = document.getElementById('particles');
+  if(!container) return;
+  const spices = ['🌶️','✦','◆','⬤'];
+  for(let i=0;i<12;i++){
+    const el = document.createElement('div');
+    el.className='particle';
+    el.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${4+Math.random()*6}px;height:${4+Math.random()*6}px;background:rgba(200,155,75,${0.1+Math.random()*0.2});animation-delay:${Math.random()*8}s;animation-duration:${6+Math.random()*6}s`;
+    container.appendChild(el);
+  }
+}
+
+// Reveal on scroll
+function initReveal(){
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('visible')});
+  },{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+}
+
+createParticles();
+initReveal();
+</script>
+</body>
+</html>
